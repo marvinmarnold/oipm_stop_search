@@ -67,7 +67,6 @@ normalize.race <- function(race) {
     return(unknown.race)
   }
 }
-
 stops.all <- stops.all %>% mutate(
   SubjectRace = sapply(SubjectRace, normalize.race)
 )
@@ -77,3 +76,5 @@ stops.all <- stops.all %>% mutate(
 
 # Write data to file
 # write.csv(stops.for.year, file = "data_public/data.nola.gov/stops_2017.csv")
+filename <- paste0("stops_all_clean_", format(Sys.time(), "%Y-%m-%d"), ".csv")
+write.csv(stops.all, file = filename)
