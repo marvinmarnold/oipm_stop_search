@@ -2,7 +2,9 @@
 devtools::install_github('marvinmarnold/roipm')
 require(roipm)
 require(dplyr)
-library(tidyr)
+require(tidyr)
+require(anytime)
+require(plotly)
 
 setwd("/media/sf_oipm/code/stop_search/")
 stops.csv <- "StopSearch_DNG_20180721.csv"
@@ -19,7 +21,7 @@ stops.all <- read.csv(stops.csv, stringsAsFactors = FALSE)
 
 # Parse date-time into year, date, day, and time
 stops.all <- stops.all %>% mutate(
-  event.date = as.Date(EventDate, format=dateFormat),
+  event.date = anytime(EventDate),
   event.year = format(event.date, "%Y"),
   event.month = format(event.date, "%b"),
   month = match(event.month, month.abbrs),
