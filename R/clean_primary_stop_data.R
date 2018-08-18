@@ -1,14 +1,3 @@
-
-devtools::install_github('marvinmarnold/roipm')
-require(roipm)
-require(dplyr)
-require(tidyr)
-require(anytime)
-require(plotly)
-
-setwd("/media/sf_oipm/code/stop_search/")
-stops.csv <- "StopSearch_DNG_20180721.csv"
-
 # How the date is formatted
 dateFormat <- "%d/%m/%Y %I:%M:%S %p"
 month.abbrs <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
@@ -77,6 +66,9 @@ stops.all <- stops.all %>% mutate(
 # stops.for.year <- stops.all %>% filter(event.year == year)
 
 # Write data to file
-# write.csv(stops.for.year, file = "data_public/data.nola.gov/stops_2017.csv")
-filename <- paste0("stops_all_clean_", format(Sys.time(), "%Y-%m-%d"), ".csv")
+filename <- "stops_all_clean_recent.csv"
+write.csv(stops.all, file = filename)
+
+# Write a timestampped copy that won't be overriden
+filename <- paste0("clean_data/stops_all_clean_", format(Sys.time(), "%Y-%m-%d"), ".csv")
 write.csv(stops.all, file = filename)

@@ -1,8 +1,8 @@
+check.vars(c("clean.stops.csv", "analysis.start.year", "analysis.end.year"))
 
+stops.all <- read.csv(clean.stops.csv, stringsAsFactors = FALSE)
 
-stops.all <- read.csv("stops_all_clean_2018-08-05.csv", stringsAsFactors = FALSE)
-
-real.stops <- stops.all %>% filter(event.year >= 2010, event.year <= 2017)
+real.stops <- stops.all %>% filter(event.year >= analysis.start.year, event.year <= analysis.end.year)
 
 stops.by.year <- real.stops %>% distinct(FieldInterviewID, .keep_all = TRUE) %>% group_by(event.year) %>% summarise(count = n())
 people.stopped.by.year <- real.stops %>% group_by(event.year) %>% summarise(count = n())
