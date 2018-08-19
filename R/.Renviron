@@ -1,0 +1,5 @@
+plotly_username=marvingeeky
+plotly_api_key=84xr9prFKcFcBJB7ppRT
+MAPBOX_KEY='pk.eyJ1IjoibWFydmluZ2Vla3kiLCJhIjoiY2pnMTkyMHVvMTJmZTJ3cDk1OGhjNjlwcyJ9.T6atnQVox1lO9tanVssIgA'
+CENSUS_KEY=11d1fb92ca1cd0156ede420f277939efde64b484
+WORKING_DIR="/home/data/oipm_stop_search/R"

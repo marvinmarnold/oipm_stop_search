@@ -66,9 +66,9 @@ stops.all <- stops.all %>% mutate(
 # stops.for.year <- stops.all %>% filter(event.year == year)
 
 # Write data to file
-filename <- "stops_all_clean_recent.csv"
+filename <- "clean_data/stops_clean_recent.csv"
 write.csv(stops.all, file = filename)
 
 # Write a timestampped copy that won't be overriden
-filename <- paste0("clean_data/stops_all_clean_", format(Sys.time(), "%Y-%m-%d"), ".csv")
+filename <- paste0("clean_data/stops_clean_", format(Sys.time(), "%Y-%m-%d"), ".csv")
 write.csv(stops.all, file = filename)

@@ -1,0 +1,91 @@
+{
+  "visdat": {
+    "13e61b5d62f8": ["function () ", "plotlyVisDat"]
+  },
+  "cur_data": "13e61b5d62f8",
+  "attrs": {
+    "13e61b5d62f8": {
+      "name": "Number of stops",
+      "x": {},
+      "y": {},
+      "mode": "lines",
+      "alpha": 1,
+      "sizes": [10, 100],
+      "type": "scatter"
+    },
+    "13e61b5d62f8.1": {
+      "name": "Number of people stopped",
+      "x": {},
+      "y": [62005, 86577, 65299, 39394, 54649, 68778, 47820, 56348, 32273],
+      "mode": "lines",
+      "alpha": 1,
+      "sizes": [10, 100],
+      "type": "scatter"
+    }
+  },
+  "layout": {
+    "margin": {
+      "b": 40,
+      "l": 60,
+      "t": 25,
+      "r": 10
+    },
+    "hovermode": "compare",
+    "yaxis": {
+      "domain": [0, 1],
+      "range": [0, 90000],
+      "title": "count"
+    },
+    "xaxis": {
+      "domain": [0, 1],
+      "title": "event.year"
+    },
+    "showlegend": true
+  },
+  "source": "A",
+  "config": {
+    "modeBarButtonsToAdd": [],
+    "cloud": false
+  },
+  "data": [
+    {
+      "name": "Number of stops",
+      "x": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+      "y": [49744, 71959, 56168, 34548, 48328, 61118, 41775, 49214, 27453],
+      "mode": "lines",
+      "type": "scatter",
+      "line": {
+        "fillcolor": "rgba(31,119,180,1)",
+        "color": "rgba(31,119,180,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    },
+    {
+      "name": "Number of people stopped",
+      "x": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
+      "y": [62005, 86577, 65299, 39394, 54649, 68778, 47820, 56348, 32273],
+      "mode": "lines",
+      "type": "scatter",
+      "line": {
+        "fillcolor": "rgba(255,127,14,1)",
+        "color": "rgba(255,127,14,1)"
+      },
+      "xaxis": "x",
+      "yaxis": "y",
+      "frame": null
+    }
+  ],
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.2,
+    "selected": {
+      "opacity": 1
+    }
+  },
+  "base_url": "https://plot.ly"
+}

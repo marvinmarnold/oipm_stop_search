@@ -4,7 +4,7 @@
 # Reset environment
 rm(list = ls())
 
-setwd("/home/data/code/stop-search/R")
+setwd(Sys.getenv("WORKING_DIR"))
 
 ############################################ SETUP ENV ##################################################
 
@@ -17,7 +17,7 @@ analysis.start.year <- 2010
 analysis.end.year <- 2018
 
 stops.csv <- "src_data/StopSearch_DNG_20180721.csv"
-clean.stops.csv <- "clean_data/stops_all_clean_recent.csv"
+clean.stops.csv <- "clean_data/stops_clean_recent.csv"
 police.districts.csv <- "clean_data/Police_Districts.geojson"
 
 ########################################################################################################
@@ -30,6 +30,7 @@ require(tidyr)
 require(anytime)
 require(plotly)
 require(leaflet)
+require(jsonlite)
 
 ########################################################################################################
 ############################################# LOAD DATA ################################################
@@ -41,4 +42,6 @@ source("analysis/police_districts.R")
 if (RECLEAN_DATA) {
   source("clean_primary_stop_data.R")
 } 
+
+source("analysis/stops_by_year.R")
 

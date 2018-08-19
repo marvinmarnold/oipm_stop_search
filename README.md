@@ -26,6 +26,7 @@ Download Gatsby to build the website. Download R to explore the data.
 - Data analysis was written in R with R Studio. 
 - Website written with React and compiled with [Gatsby](https://www.gatsbyjs.org/).
 - Visualizations using [Plotly](https://plot.ly/products/react/)
+- Mapbox for Maps. 
 
 ### Preview website
 ```
@@ -42,6 +43,7 @@ require(dplyr)
 require(tidyr)
 require(anytime)
 require(plotly)
+require(leaflet)
 
 
 

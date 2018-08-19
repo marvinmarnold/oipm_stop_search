@@ -19,11 +19,18 @@ p.stops <- plot_ly(stops.by.year,
     hovermode="compare",
     yaxis = list(range=c(0,90000)))
                                                                                                  
-                                                                                                 
-p.stops
-p.stops.json <- plotly::plotly_json(config(p.stops, collaborate = FALSE), FALSE)
-p.stops.json
+                                                                                          
+# Remove unwanted attributes
+p.stops.json <- plotly::plotly_json(config(p.stops, collaborate = FALSE), FALSE)  
+#p.stops.list <- fromJSON(p.stops.json)
+#p.stops.list = list(
+#  layout = p.stops.list$layout,
+#  config = p.stops.list$config,
+#  data = p.stops.list$layout)
+
+#p.stops.json <- toJSON(p.stops.list, pretty = TRUE)
+#p.stops.json
 
 #htmlwidgets::saveWidget(p.stops, "stops.html")
 
-write(p.stops.json, "../public/static/data/stops-by-year.json")
+write(p.stops.json, "../src/data/stops-by-year.json")

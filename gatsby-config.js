@@ -1,6 +1,11 @@
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Default Starter',
-  },
-  plugins: ['gatsby-plugin-react-helmet'],
+	pathPrefix: `/oipm_stop_search`,
+	siteMetadata: {
+		title: 'OIPM Stop & Frisk Report',
+	},
+	plugins: [
+		'gatsby-plugin-react-helmet'
+	]
 }
+
+
