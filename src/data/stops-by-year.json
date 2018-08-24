@@ -1,26 +1,29 @@
 {
   "visdat": {
-    "13e61b5d62f8": ["function () ", "plotlyVisDat"]
+    "7e416103cf7d": ["function () ", "plotlyVisDat"]
   },
-  "cur_data": "13e61b5d62f8",
+  "cur_data": "7e416103cf7d",
   "attrs": {
-    "13e61b5d62f8": {
-      "name": "Number of stops",
+    "7e416103cf7d": {
       "x": {},
       "y": {},
       "mode": "lines",
-      "alpha": 1,
+      "name": "Number of stops",
+      "alpha_stroke": 1,
       "sizes": [10, 100],
+      "spans": [1, 20],
       "type": "scatter"
     },
-    "13e61b5d62f8.1": {
-      "name": "Number of people stopped",
+    "7e416103cf7d.1": {
       "x": {},
-      "y": [62005, 86577, 65299, 39394, 54649, 68778, 47820, 56348, 32273],
+      "y": [62005, 86577, 65299, 39394, 54649, 68778, 47821, 56348, 39466],
       "mode": "lines",
-      "alpha": 1,
+      "name": "Number of people stopped",
+      "alpha_stroke": 1,
       "sizes": [10, 100],
-      "type": "scatter"
+      "spans": [1, 20],
+      "type": "scatter",
+      "inherit": true
     }
   },
   "layout": {
@@ -33,11 +36,13 @@
     "hovermode": "compare",
     "yaxis": {
       "domain": [0, 1],
+      "automargin": true,
       "range": [0, 90000],
       "title": "count"
     },
     "xaxis": {
       "domain": [0, 1],
+      "automargin": true,
       "title": "event.year"
     },
     "showlegend": true
@@ -49,13 +54,24 @@
   },
   "data": [
     {
-      "name": "Number of stops",
       "x": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
-      "y": [49744, 71959, 56168, 34548, 48328, 61118, 41775, 49214, 27453],
+      "y": [49744, 71959, 56168, 34548, 48328, 61118, 41776, 49214, 33641],
       "mode": "lines",
+      "name": "Number of stops",
       "type": "scatter",
+      "marker": {
+        "color": "rgba(31,119,180,1)",
+        "line": {
+          "color": "rgba(31,119,180,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(31,119,180,1)"
+      },
+      "error_x": {
+        "color": "rgba(31,119,180,1)"
+      },
       "line": {
-        "fillcolor": "rgba(31,119,180,1)",
         "color": "rgba(31,119,180,1)"
       },
       "xaxis": "x",
@@ -63,13 +79,24 @@
       "frame": null
     },
     {
-      "name": "Number of people stopped",
       "x": [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018],
-      "y": [62005, 86577, 65299, 39394, 54649, 68778, 47820, 56348, 32273],
+      "y": [62005, 86577, 65299, 39394, 54649, 68778, 47821, 56348, 39466],
       "mode": "lines",
+      "name": "Number of people stopped",
       "type": "scatter",
+      "marker": {
+        "color": "rgba(255,127,14,1)",
+        "line": {
+          "color": "rgba(255,127,14,1)"
+        }
+      },
+      "error_y": {
+        "color": "rgba(255,127,14,1)"
+      },
+      "error_x": {
+        "color": "rgba(255,127,14,1)"
+      },
       "line": {
-        "fillcolor": "rgba(255,127,14,1)",
         "color": "rgba(255,127,14,1)"
       },
       "xaxis": "x",
@@ -85,7 +112,8 @@
     "opacityDim": 0.2,
     "selected": {
       "opacity": 1
-    }
+    },
+    "debounce": 0
   },
   "base_url": "https://plot.ly"
 }
