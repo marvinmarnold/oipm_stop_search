@@ -27,15 +27,15 @@ class IndexPage extends React.Component {
 				<p className="lead">Introduction goes here</p>
 				<p className="lead">
 					After you are done reading this report, check out our interactive
-					<Link to="https://annual-report-2017.nolaipm.gov"> 2017 Annual Annual Report </Link>
-					or one of our <Link to="http://nolaipm.gov/category/reports-public-letters/">
-					other reports</Link>.
+					<a href="https://annual-report-2017.nolaipm.gov"> 2017 Annual Annual Report </a>
+					or one of our <a href="http://nolaipm.gov/category/reports-public-letters/">
+					other reports</a>.
 				</p>
 
 				<p className="lead">
 					The source code that created this site and all analysis is
-					available	<Link to="https://github.com/marvinmarnold/oipm_stop_search">
-					on Github</Link>.
+					available	<a href="https://github.com/marvinmarnold/oipm_stop_search">
+					on Github</a>.
 				</p>
 				{this.renderContinueButton()}
 			</div>
