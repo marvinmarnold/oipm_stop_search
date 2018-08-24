@@ -48,7 +48,7 @@ class Header extends React.Component {
               <NavLink href={withPrefix("/")}>Introduction</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href={withPrefix("/analysis/")>Analysis</NavLink>
+              <NavLink href={withPrefix("/analysis/")}>Analysis</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

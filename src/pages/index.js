@@ -45,7 +45,7 @@ class IndexPage extends React.Component {
 	renderContinueButton() {
 		return (
 			<div className="my-5">
-				<Link to="/analysis/"><Button color="primary" size="lg" block>Continue to Report</Button></Link>
+				<Link to="/analysis/"><Button color="primary" size="lg" block>Continue to the report</Button></Link>
 			</div>
 		)
 	}
@@ -71,7 +71,11 @@ class IndexPage extends React.Component {
 				<h2>Stop & Frisk Report</h2>
 
 				<h1>This is a work in progress!</h1>
-				<h2>None of the numbers herein should be relied on until the report is officially released later in 2018.</h2>
+				<h2>
+				<strong>
+				None of the numbers herein should be relied on until the report is officially released later in 2018.
+				</strong>
+				</h2>
 
 				{this.renderFirstRow()}
 		  </div>
