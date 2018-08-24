@@ -51,7 +51,7 @@ class AnalysisPage extends React.Component {
                 onInitialized={(figure) => this.setState(figure)}
                 onUpdate={(figure) => this.setState(figure)}
             />
-            <h6 className="text-center">Stops by District (all time)</h6>
+            <h6 className="text-center">Stops by District (since 2010)</h6>
           </Col>
 
           <Col>
@@ -62,7 +62,7 @@ class AnalysisPage extends React.Component {
                 onInitialized={(figure) => this.setState(figure)}
                 onUpdate={(figure) => this.setState(figure)}
             />
-            <h6 className="text-center">Stops by District (2018)</h6>
+            <h6 className="text-center">Stops by District (only 2018)</h6>
           </Col>
         </Row>
       </div>
