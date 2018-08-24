@@ -1,11 +1,18 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { Row, Col } from 'reactstrap';
 
 const AnalysisPage = () => (
-  <div>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+  <div className="py-5">
+    <Row>
+      <Col>
+        <p>Analysis goes here</p>
+      </Col>
+
+      <Col>
+
+      </Col>
+    </Row>
   </div>
 )
 
