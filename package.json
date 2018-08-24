@@ -1,9 +1,10 @@
 {
   "name": "oipm-stop-search",
-  "description": "Gatsby default starter",
+  "description": "OIPM Stop & Frisk Report",
   "version": "1.0.0",
   "author": "Marvin Arnold <marvin@geeky.rocks>",
   "dependencies": {
+    "bootstrap": "^4.1.3",
     "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.46",
     "gatsby-plugin-react-helmet": "^2.0.11",
@@ -12,10 +13,16 @@
     "plotly": "^1.0.6",
     "plotly.js": "^1.40.0",
     "react-helmet": "^5.2.0",
-    "react-plotly.js": "^2.2.0"
+    "react-plotly.js": "^2.2.0",
+    "reactstrap": "^6.4.0"
   },
   "keywords": [
-    "gatsby"
+    "new orleans",
+    "police",
+    "stop & frisk",
+    "OIPM",
+    "New Orleans Independent Police Monitor",
+    "NOPD"
   ],
   "license": "MIT",
   "scripts": {

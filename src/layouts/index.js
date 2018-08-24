@@ -4,25 +4,19 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Layout = ({ children, data }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Analysis of New Orleans Police Department (NOPD) Stop & Firsk activity by the New Orleans Independent Police Monitor (OIPM).' },
+        { name: 'keywords', content: 'police, monitor, accountability, stop, search, frisk, New Orleans, NOPD, OIPM' },
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <div>
       {children()}
     </div>
   </div>
