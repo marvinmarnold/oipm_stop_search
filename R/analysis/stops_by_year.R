@@ -1,6 +1,4 @@
-check.vars(c("clean.stops.csv", "analysis.start.year", "analysis.end.year"))
-
-stops.all <- read.csv(clean.stops.csv, stringsAsFactors = FALSE)
+check.vars(c("stops.all", "analysis.start.year", "analysis.end.year"))
 
 real.stops <- stops.all %>% filter(event.year >= analysis.start.year, event.year <= analysis.end.year)
 
@@ -18,19 +16,6 @@ p.stops <- plot_ly(stops.by.year,
   layout(
     hovermode="compare",
     yaxis = list(range=c(0,90000)))
-                                                                                                 
-                                                                                          
-# Remove unwanted attributes
-p.stops.json <- plotly::plotly_json(config(p.stops, collaborate = FALSE), FALSE)  
-#p.stops.list <- fromJSON(p.stops.json)
-#p.stops.list = list(
-#  layout = p.stops.list$layout,
-#  config = p.stops.list$config,
-#  data = p.stops.list$layout)
 
-#p.stops.json <- toJSON(p.stops.list, pretty = TRUE)
-#p.stops.json
-
-#htmlwidgets::saveWidget(p.stops, "stops.html")
-
-write(p.stops.json, "../src/data/stops-by-year.json")
+# Write plot to JSON
+gen.plotly.json(p.stops, "stops-by-year")

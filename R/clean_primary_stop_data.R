@@ -17,7 +17,8 @@ stops.all <- stops.all %>% mutate(
   event.date.str = format(event.date, "%b %d, %Y"),
   event.day = weekdays(event.date),
   event.time = format(event.date, "%I:%M:%S %p"),
-  event.time.24 = format(event.date, "%H:%M:%S")
+  event.time.24 = format(event.date, "%H:%M:%S"),
+  event.hour.24 = format(event.date, "%H")
 )
 
 # Parse Actions Taken column into multiple columns

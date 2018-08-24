@@ -14,6 +14,7 @@ rm(list = ls())
 RECLEAN_DATA <- FALSE
 
 # Timeframe that analysis should cover
+analysis.year <- 2018 # a year to highlight
 analysis.start.year <- 2010
 analysis.end.year <- 2018
 
@@ -35,13 +36,23 @@ require(jsonlite)
 ########################################################################################################
 ############################################# LOAD DATA ################################################
 
+# Helper function to write Plotly JSON
+gen.plotly.json <- function(p, name) {
+  p.json <- plotly::plotly_json(config(p, collaborate = FALSE), FALSE)  
+  write(p.json, paste0("../src/data/", name, ".json"))
+}
+
 # Public data
 source("analysis/police_districts.R")
 
 # Data coming from non-public sources
 if (RECLEAN_DATA) {
   source("clean_primary_stop_data.R")
-} 
+} else {
+  stops.all <- read.csv(clean.stops.csv, stringsAsFactors = FALSE)
+  stops.for.year <- stops.all %>% filter(event.year == analysis.year)
+}
 
 source("analysis/stops_by_year.R")
+source("analysis/stops_by_district.R")
 

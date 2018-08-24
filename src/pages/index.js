@@ -1,15 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import Plot from 'react-plotly.js';
 import { Button } from 'reactstrap';
 
+import LoadingPlot from "../components/loading-plot.js";
 import stopsByYearJson from "../data/stops-by-year.json";
-
 
 class IndexPage extends React.Component {
 	constructor() {
     super()
-    this.state = { data: null }
+    this.state = { data: null, layout: null }
   }
 	componentDidMount() {
 		let adjustedLayout = stopsByYearJson.layout
@@ -59,14 +58,6 @@ class IndexPage extends React.Component {
 		)
 	}
 
-	renderTeaserGraph() {
-		return (
-			<div>
-				{this.renderPlot()}
-			</div>
-		)
-	}
-
 	renderContinueButton() {
 		return (
 			<div className="my-5">
@@ -82,7 +73,7 @@ class IndexPage extends React.Component {
 					{this.renderIntroText()}
 				</div>
 				<div className="col-md">
-					{this.renderTeaserGraph()}
+					<LoadingPlot data={this.state.data} layout={this.state.layout} config={this.state.config} />
 				</div>
 			</div>
 		)
@@ -94,6 +85,9 @@ class IndexPage extends React.Component {
 		  <div className="text-center">
 		    <h5 className="text-center mt-3">New Orleans Independent Police Monitor</h5>
 				<h2>Stop & Frisk Report</h2>
+
+				<h1>This is a work in progress!</h1>
+				<h2>None of the numbers herein should be relied on until the report is officially released later in 2018.</h2>
 
 				{this.renderFirstRow()}
 		  </div>
