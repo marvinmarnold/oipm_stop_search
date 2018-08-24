@@ -40,8 +40,21 @@ class IndexPage extends React.Component {
 
 	renderIntroText() {
 		return (
-			<div>
+			<div className="text-left">
 				<p className="lead">Introduction goes here</p>
+				<p className="lead">
+					After you are done reading this report, check out our interactive
+					<Link to="https://annual-report-2017.nolaipm.gov"> 2017 Annual Annual Report </Link>
+					or one of our <Link to="http://nolaipm.gov/category/reports-public-letters/">
+					other reports</Link>.
+				</p>
+
+				<p className="lead">
+					The source code that created this site and all analysis is
+					available	<Link to="https://github.com/marvinmarnold/oipm_stop_search">
+					on Github</Link>.
+				</p>
+				{this.renderContinueButton()}
 			</div>
 		)
 	}
@@ -57,7 +70,7 @@ class IndexPage extends React.Component {
 	renderContinueButton() {
 		return (
 			<div className="my-5">
-				<Link to="/page-2/"><Button color="primary" size="lg" block>Continue to Report</Button></Link>
+				<Link to="/analysis/"><Button color="primary" size="lg" block>Continue to Report</Button></Link>
 			</div>
 		)
 	}
@@ -83,8 +96,6 @@ class IndexPage extends React.Component {
 				<h2>Stop & Frisk Report</h2>
 
 				{this.renderFirstRow()}
-
-				{this.renderContinueButton()}
 		  </div>
 		  );
 	}

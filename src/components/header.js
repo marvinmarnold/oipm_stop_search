@@ -37,12 +37,18 @@ class Header extends React.Component {
     return (
       <div>
         <Navbar color="dark" dark expand="md">
-        <NavbarBrand href="https://nolaipm.gov">
+        <NavbarBrand href="http://nolaipm.gov">
           <img src={logo} /> Stop & Frisk Report
         </NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
+            <NavItem>
+              <NavLink href="/">Introduction</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/analysis/">Analysis</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
         </Navbar>
