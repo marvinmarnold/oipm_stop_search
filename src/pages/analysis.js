@@ -44,12 +44,20 @@ class AnalysisPage extends React.Component {
           </Col>
 
           <Col>
-
+            <LoadingPlot
+                data={this.state.allStopsByDistrictData}
+                layout={this.state.allStopsByDistrictLayout}
+                config={this.state.allStopsByDistrictConfig}
+            />
             <h6 className="text-center">Stops by District (since 2010)</h6>
           </Col>
 
           <Col>
-
+            <LoadingPlot
+                data={this.state.yearStopsByDistrictData}
+                layout={this.state.yearStopsByDistrictLayout}
+                config={this.state.yearStopsByDistrictConfig}
+            />
             <h6 className="text-center">Stops by District (only 2018)</h6>
           </Col>
         </Row>

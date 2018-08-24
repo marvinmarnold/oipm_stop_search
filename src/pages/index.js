@@ -21,22 +21,6 @@ class IndexPage extends React.Component {
 		})
 	}
 
-	renderPlot() {
-		if (!this.state.data) {
-			return <h1>Loading plot</h1>
-		} else {
-			return (
-				<Plot
-				    data={this.state.data}
-				    layout={this.state.layout}
-				    config={this.state.config}
-				    onInitialized={(figure) => this.setState(figure)}
-				    onUpdate={(figure) => this.setState(figure)}
-				/>
-			)
-		}
-	}
-
 	renderIntroText() {
 		return (
 			<div className="text-left">

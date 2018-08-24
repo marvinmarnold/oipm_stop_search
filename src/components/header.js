@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import { withPrefix } from "gatsby-link";
 
 import {
   Collapse,
@@ -44,10 +45,10 @@ class Header extends React.Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/">Introduction</NavLink>
+              <NavLink href={withPrefix("/")}>Introduction</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/analysis/">Analysis</NavLink>
+              <NavLink href={withPrefix("/analysis/")>Analysis</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
