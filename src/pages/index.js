@@ -1,7 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Plot from 'react-plotly.js';
+import { Button } from 'reactstrap';
+
 import stopsByYearJson from "../data/stops-by-year.json";
+
 
 class IndexPage extends React.Component {
 	constructor() {
@@ -9,10 +12,13 @@ class IndexPage extends React.Component {
     this.state = { data: null }
   }
 	componentDidMount() {
+		let adjustedLayout = stopsByYearJson.layout
+		adjustedLayout["width"] = 400
+		adjustedLayout["height"] = 300
+
 		this.setState({
 			data: stopsByYearJson.data,
-			layout: stopsByYearJson.layout,
-			data: stopsByYearJson.data
+			layout: adjustedLayout
 		})
 	}
 
@@ -32,18 +38,55 @@ class IndexPage extends React.Component {
 		}
 	}
 
+	renderIntroText() {
+		return (
+			<div>
+				<p className="lead">Introduction goes here</p>
+			</div>
+		)
+	}
+
+	renderTeaserGraph() {
+		return (
+			<div>
+				{this.renderPlot()}
+			</div>
+		)
+	}
+
+	renderContinueButton() {
+		return (
+			<div className="my-5">
+				<Link to="/page-2/"><Button color="primary" size="lg" block>Continue to Report</Button></Link>
+			</div>
+		)
+	}
+
+	renderFirstRow() {
+		return (
+			<div className="row my-5">
+				<div className="col-md">
+					{this.renderIntroText()}
+				</div>
+				<div className="col-md">
+					{this.renderTeaserGraph()}
+				</div>
+			</div>
+		)
+	}
+
 	render() {
 
 		return (
-		  <div>
-			{this.renderPlot()}
-		    <h1 id="tester">Hi people</h1>
-		    <p>Welcome to your new Gatsby site.</p>
-		    <p>Now go build something great.</p>
-		    <Link to="/page-2/">Go to page 2</Link>
+		  <div className="text-center">
+		    <h5 className="text-center mt-3">New Orleans Independent Police Monitor</h5>
+				<h2>Stop & Frisk Report</h2>
+
+				{this.renderFirstRow()}
+
+				{this.renderContinueButton()}
 		  </div>
 		  );
 	}
 }
 export default IndexPage
-

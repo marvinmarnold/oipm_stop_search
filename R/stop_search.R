@@ -5,7 +5,7 @@
 rm(list = ls())
 
 #setwd("/home/pili/code/oipm/oipm_stop_search/R")
-setwd(Sys.getenv("STOP_SEARCH_DIR"))
+#setwd(Sys.getenv("STOP_SEARCH_DIR"))
 
 ############################################ SETUP ENV ##################################################
 
