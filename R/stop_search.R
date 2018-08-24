@@ -3,6 +3,7 @@
 
 # Reset environment
 rm(list = ls())
+readRenviron(".Renviron")
 
 #setwd("/home/pili/code/oipm/oipm_stop_search/R")
 #setwd(Sys.getenv("STOP_SEARCH_DIR"))
